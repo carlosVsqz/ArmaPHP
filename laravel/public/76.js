@@ -1,14 +1,14 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[76],{
 
-/***/ "../coreui/node_modules/cropperjs/dist/cropper.css":
-/*!*********************************************************!*\
-  !*** ../coreui/node_modules/cropperjs/dist/cropper.css ***!
-  \*********************************************************/
+/***/ "../view/node_modules/cropperjs/dist/cropper.css":
+/*!*******************************************************!*\
+  !*** ../view/node_modules/cropperjs/dist/cropper.css ***!
+  \*******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../../laravel/node_modules/css-loader??ref--6-1!../../../../laravel/node_modules/postcss-loader/src??ref--6-2!./cropper.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!../coreui/node_modules/cropperjs/dist/cropper.css");
+var content = __webpack_require__(/*! !../../../../laravel/node_modules/css-loader??ref--6-1!../../../../laravel/node_modules/postcss-loader/src??ref--6-2!./cropper.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!../view/node_modules/cropperjs/dist/cropper.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -30,10 +30,10 @@ if(false) {}
 
 /***/ }),
 
-/***/ "../coreui/node_modules/cropperjs/dist/cropper.js":
-/*!********************************************************!*\
-  !*** ../coreui/node_modules/cropperjs/dist/cropper.js ***!
-  \********************************************************/
+/***/ "../view/node_modules/cropperjs/dist/cropper.js":
+/*!******************************************************!*\
+  !*** ../view/node_modules/cropperjs/dist/cropper.js ***!
+  \******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3656,10 +3656,10 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!../coreui/node_modules/cropperjs/dist/cropper.css":
-/*!*****************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!../coreui/node_modules/cropperjs/dist/cropper.css ***!
-  \*****************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!../view/node_modules/cropperjs/dist/cropper.css":
+/*!***************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!../view/node_modules/cropperjs/dist/cropper.css ***!
+  \***************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 

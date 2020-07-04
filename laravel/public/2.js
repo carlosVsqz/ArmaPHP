@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[2],{
 
-/***/ "../coreui/node_modules/@coreui/utils/src/deep-objects-merge.js":
-/*!**********************************************************************!*\
-  !*** ../coreui/node_modules/@coreui/utils/src/deep-objects-merge.js ***!
-  \**********************************************************************/
+/***/ "../view/node_modules/@coreui/utils/src/deep-objects-merge.js":
+/*!********************************************************************!*\
+  !*** ../view/node_modules/@coreui/utils/src/deep-objects-merge.js ***!
+  \********************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -27,16 +27,16 @@ const deepObjectsMerge = (target, source) => {
 
 /***/ }),
 
-/***/ "../coreui/node_modules/@coreui/utils/src/get-color.js":
-/*!*************************************************************!*\
-  !*** ../coreui/node_modules/@coreui/utils/src/get-color.js ***!
-  \*************************************************************/
+/***/ "../view/node_modules/@coreui/utils/src/get-color.js":
+/*!***********************************************************!*\
+  !*** ../view/node_modules/@coreui/utils/src/get-color.js ***!
+  \***********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _get_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./get-style */ "../coreui/node_modules/@coreui/utils/src/get-style.js");
+/* harmony import */ var _get_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./get-style */ "../view/node_modules/@coreui/utils/src/get-style.js");
 
 
 const getColor = (rawProperty, element = document.body) => {
@@ -50,10 +50,10 @@ const getColor = (rawProperty, element = document.body) => {
 
 /***/ }),
 
-/***/ "../coreui/node_modules/@coreui/utils/src/get-css-custom-properties.js":
-/*!*****************************************************************************!*\
-  !*** ../coreui/node_modules/@coreui/utils/src/get-css-custom-properties.js ***!
-  \*****************************************************************************/
+/***/ "../view/node_modules/@coreui/utils/src/get-css-custom-properties.js":
+/*!***************************************************************************!*\
+  !*** ../view/node_modules/@coreui/utils/src/get-css-custom-properties.js ***!
+  \***************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -107,16 +107,16 @@ const getCssCustomProperties = () => {
 
 /***/ }),
 
-/***/ "../coreui/node_modules/@coreui/utils/src/get-style.js":
-/*!*************************************************************!*\
-  !*** ../coreui/node_modules/@coreui/utils/src/get-style.js ***!
-  \*************************************************************/
+/***/ "../view/node_modules/@coreui/utils/src/get-style.js":
+/*!***********************************************************!*\
+  !*** ../view/node_modules/@coreui/utils/src/get-style.js ***!
+  \***********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _get_css_custom_properties__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./get-css-custom-properties */ "../coreui/node_modules/@coreui/utils/src/get-css-custom-properties.js");
+/* harmony import */ var _get_css_custom_properties__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./get-css-custom-properties */ "../view/node_modules/@coreui/utils/src/get-css-custom-properties.js");
 
 
 const minIEVersion = 10
@@ -141,10 +141,10 @@ const getStyle = (property, element = document.body) => {
 
 /***/ }),
 
-/***/ "../coreui/node_modules/@coreui/utils/src/hex-to-rgb.js":
-/*!**************************************************************!*\
-  !*** ../coreui/node_modules/@coreui/utils/src/hex-to-rgb.js ***!
-  \**************************************************************/
+/***/ "../view/node_modules/@coreui/utils/src/hex-to-rgb.js":
+/*!************************************************************!*\
+  !*** ../view/node_modules/@coreui/utils/src/hex-to-rgb.js ***!
+  \************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -184,10 +184,10 @@ const hexToRgb = color => {
 
 /***/ }),
 
-/***/ "../coreui/node_modules/@coreui/utils/src/hex-to-rgba.js":
-/*!***************************************************************!*\
-  !*** ../coreui/node_modules/@coreui/utils/src/hex-to-rgba.js ***!
-  \***************************************************************/
+/***/ "../view/node_modules/@coreui/utils/src/hex-to-rgba.js":
+/*!*************************************************************!*\
+  !*** ../view/node_modules/@coreui/utils/src/hex-to-rgba.js ***!
+  \*************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -227,37 +227,37 @@ const hexToRgba = (color, opacity = 100) => {
 
 /***/ }),
 
-/***/ "../coreui/node_modules/@coreui/utils/src/index.js":
-/*!*********************************************************!*\
-  !*** ../coreui/node_modules/@coreui/utils/src/index.js ***!
-  \*********************************************************/
+/***/ "../view/node_modules/@coreui/utils/src/index.js":
+/*!*******************************************************!*\
+  !*** ../view/node_modules/@coreui/utils/src/index.js ***!
+  \*******************************************************/
 /*! exports provided: default, deepObjectsMerge, getColor, getStyle, hexToRgb, hexToRgba, makeUid, pickByKeys, rgbToHex */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _deep_objects_merge__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./deep-objects-merge */ "../coreui/node_modules/@coreui/utils/src/deep-objects-merge.js");
+/* harmony import */ var _deep_objects_merge__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./deep-objects-merge */ "../view/node_modules/@coreui/utils/src/deep-objects-merge.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "deepObjectsMerge", function() { return _deep_objects_merge__WEBPACK_IMPORTED_MODULE_0__["default"]; });
 
-/* harmony import */ var _get_color__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./get-color */ "../coreui/node_modules/@coreui/utils/src/get-color.js");
+/* harmony import */ var _get_color__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./get-color */ "../view/node_modules/@coreui/utils/src/get-color.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getColor", function() { return _get_color__WEBPACK_IMPORTED_MODULE_1__["default"]; });
 
-/* harmony import */ var _get_style__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./get-style */ "../coreui/node_modules/@coreui/utils/src/get-style.js");
+/* harmony import */ var _get_style__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./get-style */ "../view/node_modules/@coreui/utils/src/get-style.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getStyle", function() { return _get_style__WEBPACK_IMPORTED_MODULE_2__["default"]; });
 
-/* harmony import */ var _hex_to_rgb__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./hex-to-rgb */ "../coreui/node_modules/@coreui/utils/src/hex-to-rgb.js");
+/* harmony import */ var _hex_to_rgb__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./hex-to-rgb */ "../view/node_modules/@coreui/utils/src/hex-to-rgb.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "hexToRgb", function() { return _hex_to_rgb__WEBPACK_IMPORTED_MODULE_3__["default"]; });
 
-/* harmony import */ var _hex_to_rgba__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./hex-to-rgba */ "../coreui/node_modules/@coreui/utils/src/hex-to-rgba.js");
+/* harmony import */ var _hex_to_rgba__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./hex-to-rgba */ "../view/node_modules/@coreui/utils/src/hex-to-rgba.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "hexToRgba", function() { return _hex_to_rgba__WEBPACK_IMPORTED_MODULE_4__["default"]; });
 
-/* harmony import */ var _make_uid__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./make-uid */ "../coreui/node_modules/@coreui/utils/src/make-uid.js");
+/* harmony import */ var _make_uid__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./make-uid */ "../view/node_modules/@coreui/utils/src/make-uid.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "makeUid", function() { return _make_uid__WEBPACK_IMPORTED_MODULE_5__["default"]; });
 
-/* harmony import */ var _pick_by_keys__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pick-by-keys */ "../coreui/node_modules/@coreui/utils/src/pick-by-keys.js");
+/* harmony import */ var _pick_by_keys__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pick-by-keys */ "../view/node_modules/@coreui/utils/src/pick-by-keys.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "pickByKeys", function() { return _pick_by_keys__WEBPACK_IMPORTED_MODULE_6__["default"]; });
 
-/* harmony import */ var _rgb_to_hex__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./rgb-to-hex */ "../coreui/node_modules/@coreui/utils/src/rgb-to-hex.js");
+/* harmony import */ var _rgb_to_hex__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./rgb-to-hex */ "../view/node_modules/@coreui/utils/src/rgb-to-hex.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "rgbToHex", function() { return _rgb_to_hex__WEBPACK_IMPORTED_MODULE_7__["default"]; });
 
 
@@ -286,10 +286,10 @@ const utils = {
 
 /***/ }),
 
-/***/ "../coreui/node_modules/@coreui/utils/src/make-uid.js":
-/*!************************************************************!*\
-  !*** ../coreui/node_modules/@coreui/utils/src/make-uid.js ***!
-  \************************************************************/
+/***/ "../view/node_modules/@coreui/utils/src/make-uid.js":
+/*!**********************************************************!*\
+  !*** ../view/node_modules/@coreui/utils/src/make-uid.js ***!
+  \**********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -305,10 +305,10 @@ const makeUid = () => {
 
 /***/ }),
 
-/***/ "../coreui/node_modules/@coreui/utils/src/pick-by-keys.js":
-/*!****************************************************************!*\
-  !*** ../coreui/node_modules/@coreui/utils/src/pick-by-keys.js ***!
-  \****************************************************************/
+/***/ "../view/node_modules/@coreui/utils/src/pick-by-keys.js":
+/*!**************************************************************!*\
+  !*** ../view/node_modules/@coreui/utils/src/pick-by-keys.js ***!
+  \**************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -326,10 +326,10 @@ const pickByKeys = (originalObject, keys) => {
 
 /***/ }),
 
-/***/ "../coreui/node_modules/@coreui/utils/src/rgb-to-hex.js":
-/*!**************************************************************!*\
-  !*** ../coreui/node_modules/@coreui/utils/src/rgb-to-hex.js ***!
-  \**************************************************************/
+/***/ "../view/node_modules/@coreui/utils/src/rgb-to-hex.js":
+/*!************************************************************!*\
+  !*** ../view/node_modules/@coreui/utils/src/rgb-to-hex.js ***!
+  \************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -363,10 +363,10 @@ const rgbToHex = color => {
 
 /***/ }),
 
-/***/ "../coreui/node_modules/@coreui/vue-chartjs/dist/coreui-vue-chartjs.common.js":
-/*!************************************************************************************!*\
-  !*** ../coreui/node_modules/@coreui/vue-chartjs/dist/coreui-vue-chartjs.common.js ***!
-  \************************************************************************************/
+/***/ "../view/node_modules/@coreui/vue-chartjs/dist/coreui-vue-chartjs.common.js":
+/*!**********************************************************************************!*\
+  !*** ../view/node_modules/@coreui/vue-chartjs/dist/coreui-vue-chartjs.common.js ***!
+  \**********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
