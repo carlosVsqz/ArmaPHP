@@ -68,7 +68,7 @@
     import axios from "axios";
 
     export default {
-        name: 'Login',
+        name: 'Landing',
         data() {
             return {
                 email: '',

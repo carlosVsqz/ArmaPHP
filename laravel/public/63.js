@@ -140,6 +140,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Login',
@@ -359,7 +364,7 @@ var render = function() {
                       _vm._v(" "),
                       _c("p", [
                         _vm._v(
-                          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut\n                        labore et dolore magna aliqua."
                         )
                       ]),
                       _vm._v(" "),
@@ -374,7 +379,11 @@ var render = function() {
                             }
                           }
                         },
-                        [_vm._v("\n            Register Now!\n          ")]
+                        [
+                          _vm._v(
+                            "\n                        Register Now!\n                    "
+                          )
+                        ]
                       )
                     ],
                     1
