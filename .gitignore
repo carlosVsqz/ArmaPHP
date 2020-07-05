@@ -220,3 +220,5 @@ Homestead.json
 *.njsproj
 *.sln
 *.sw*
+
+/view/
