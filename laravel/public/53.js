@@ -1,16 +1,16 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[53],{
 
-/***/ "../view/src/views/menuElements/DeleteMenuElement.vue":
-/*!************************************************************!*\
-  !*** ../view/src/views/menuElements/DeleteMenuElement.vue ***!
-  \************************************************************/
+/***/ "../view/src/views/bread/DeleteBread.vue":
+/*!***********************************************!*\
+  !*** ../view/src/views/bread/DeleteBread.vue ***!
+  \***********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _DeleteMenuElement_vue_vue_type_template_id_fc0adade___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DeleteMenuElement.vue?vue&type=template&id=fc0adade& */ "../view/src/views/menuElements/DeleteMenuElement.vue?vue&type=template&id=fc0adade&");
-/* harmony import */ var _DeleteMenuElement_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DeleteMenuElement.vue?vue&type=script&lang=js& */ "../view/src/views/menuElements/DeleteMenuElement.vue?vue&type=script&lang=js&");
+/* harmony import */ var _DeleteBread_vue_vue_type_template_id_2d32b1ee___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DeleteBread.vue?vue&type=template&id=2d32b1ee& */ "../view/src/views/bread/DeleteBread.vue?vue&type=template&id=2d32b1ee&");
+/* harmony import */ var _DeleteBread_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DeleteBread.vue?vue&type=script&lang=js& */ "../view/src/views/bread/DeleteBread.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _laravel_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../laravel/node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -20,9 +20,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_laravel_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _DeleteMenuElement_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _DeleteMenuElement_vue_vue_type_template_id_fc0adade___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _DeleteMenuElement_vue_vue_type_template_id_fc0adade___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _DeleteBread_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _DeleteBread_vue_vue_type_template_id_2d32b1ee___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _DeleteBread_vue_vue_type_template_id_2d32b1ee___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -32,47 +32,47 @@ var component = Object(_laravel_node_modules_vue_loader_lib_runtime_componentNor
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "view/src/views/menuElements/DeleteMenuElement.vue"
+component.options.__file = "view/src/views/bread/DeleteBread.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "../view/src/views/menuElements/DeleteMenuElement.vue?vue&type=script&lang=js&":
-/*!*************************************************************************************!*\
-  !*** ../view/src/views/menuElements/DeleteMenuElement.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************************/
+/***/ "../view/src/views/bread/DeleteBread.vue?vue&type=script&lang=js&":
+/*!************************************************************************!*\
+  !*** ../view/src/views/bread/DeleteBread.vue?vue&type=script&lang=js& ***!
+  \************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _laravel_node_modules_babel_loader_lib_index_js_ref_4_0_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_DeleteMenuElement_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../laravel/node_modules/babel-loader/lib??ref--4-0!../../../../laravel/node_modules/vue-loader/lib??vue-loader-options!./DeleteMenuElement.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../view/src/views/menuElements/DeleteMenuElement.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_laravel_node_modules_babel_loader_lib_index_js_ref_4_0_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_DeleteMenuElement_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _laravel_node_modules_babel_loader_lib_index_js_ref_4_0_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_DeleteBread_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../laravel/node_modules/babel-loader/lib??ref--4-0!../../../../laravel/node_modules/vue-loader/lib??vue-loader-options!./DeleteBread.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../view/src/views/bread/DeleteBread.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_laravel_node_modules_babel_loader_lib_index_js_ref_4_0_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_DeleteBread_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "../view/src/views/menuElements/DeleteMenuElement.vue?vue&type=template&id=fc0adade&":
-/*!*******************************************************************************************!*\
-  !*** ../view/src/views/menuElements/DeleteMenuElement.vue?vue&type=template&id=fc0adade& ***!
-  \*******************************************************************************************/
+/***/ "../view/src/views/bread/DeleteBread.vue?vue&type=template&id=2d32b1ee&":
+/*!******************************************************************************!*\
+  !*** ../view/src/views/bread/DeleteBread.vue?vue&type=template&id=2d32b1ee& ***!
+  \******************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_DeleteMenuElement_vue_vue_type_template_id_fc0adade___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../laravel/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../laravel/node_modules/vue-loader/lib??vue-loader-options!./DeleteMenuElement.vue?vue&type=template&id=fc0adade& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../view/src/views/menuElements/DeleteMenuElement.vue?vue&type=template&id=fc0adade&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_DeleteMenuElement_vue_vue_type_template_id_fc0adade___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_DeleteBread_vue_vue_type_template_id_2d32b1ee___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../laravel/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../laravel/node_modules/vue-loader/lib??vue-loader-options!./DeleteBread.vue?vue&type=template&id=2d32b1ee& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../view/src/views/bread/DeleteBread.vue?vue&type=template&id=2d32b1ee&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_DeleteBread_vue_vue_type_template_id_2d32b1ee___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_DeleteMenuElement_vue_vue_type_template_id_fc0adade___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_DeleteBread_vue_vue_type_template_id_2d32b1ee___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../view/src/views/menuElements/DeleteMenuElement.vue?vue&type=script&lang=js&":
-/*!*********************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!../view/src/views/menuElements/DeleteMenuElement.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../view/src/views/bread/DeleteBread.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!../view/src/views/bread/DeleteBread.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -105,7 +105,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'DeleteMenu',
+  name: 'DeleteBread',
   data: function data() {
     return {
       message: '',
@@ -117,9 +117,11 @@ __webpack_require__.r(__webpack_exports__);
     goBack: function goBack() {
       this.$router.go(-1);
     },
-    deleteMenu: function deleteMenu() {
+    deleteBread: function deleteBread() {
       var self = this;
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/menu/element/delete?token=' + localStorage.getItem("api_token") + '&id=' + self.$route.params.id, {}).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/bread/' + self.$route.params.id + '?token=' + localStorage.getItem("api_token"), {
+        _method: 'DELETE'
+      }).then(function (response) {
         self.$router.go(-1);
       })["catch"](function (error) {
         console.log(error);
@@ -137,10 +139,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../view/src/views/menuElements/DeleteMenuElement.vue?vue&type=template&id=fc0adade&":
-/*!*************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!../view/src/views/menuElements/DeleteMenuElement.vue?vue&type=template&id=fc0adade& ***!
-  \*************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../view/src/views/bread/DeleteBread.vue?vue&type=template&id=2d32b1ee&":
+/*!************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!../view/src/views/bread/DeleteBread.vue?vue&type=template&id=2d32b1ee& ***!
+  \************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -165,7 +167,7 @@ var render = function() {
               _c(
                 "CCardBody",
                 [
-                  _c("h4", [_vm._v("Delete Menu Element")]),
+                  _c("h4", [_vm._v("Delete BREAD")]),
                   _vm._v(" "),
                   _c("p", [_vm._v("Are you sure?")]),
                   _vm._v(" "),
@@ -200,7 +202,7 @@ var render = function() {
                       attrs: { color: "danger" },
                       on: {
                         click: function($event) {
-                          return _vm.deleteMenu()
+                          return _vm.deleteBread()
                         }
                       }
                     },

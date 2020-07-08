@@ -14,7 +14,9 @@ class UsersAndNotesSeeder extends Seeder
      * Run the database seeds.
      *
      * @return void
+     * @throws Exception
      */
+
     public function run()
     {
         $numberOfUsers = 10;
@@ -38,7 +40,7 @@ class UsersAndNotesSeeder extends Seeder
             'role_id' => $userRole->id,
             'hierarchy' => 2,
         ]);
-        $guestRole = Role::create(['name' => 'guest']); 
+        $guestRole = Role::create(['name' => 'guest']);
         RoleHierarchy::create([
             'role_id' => $guestRole->id,
             'hierarchy' => 3,
@@ -67,7 +69,7 @@ class UsersAndNotesSeeder extends Seeder
         ]);
         array_push($statusIds, DB::getPdo()->lastInsertId());
         /*  insert users   */
-        $user = User::create([ 
+        $user = User::create([
             'name' => 'admin',
             'email' => 'admin@admin.com',
             'email_verified_at' => now(),

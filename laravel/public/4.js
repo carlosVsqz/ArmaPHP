@@ -517,7 +517,7 @@ __webpack_require__.r(__webpack_exports__);
       };
 
       for (var i = 0; i < data['elements'].length; i++) {
-        if (data['elements'][i]['slug'] == 'dropdown') {
+        if (data['elements'][i]['slug'] === 'dropdown') {
           result._children.push(this.dropdown(data['elements'][i]));
         } else {
           result._children.push({
@@ -713,6 +713,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -803,6 +804,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'TheHeaderDropdownAccnt',
@@ -814,7 +825,8 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     logout: function logout() {
       var self = this;
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/logout?token=' + localStorage.getItem("api_token"), {}).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/logout?token=' + localStorage.getItem("api_token"), {}) // eslint-disable-next-line no-unused-vars
+      .then(function (response) {
         self.$router.push({
           path: '/login'
         });
@@ -892,7 +904,7 @@ __webpack_require__.r(__webpack_exports__);
       };
 
       for (var i = 0; i < data['elements'].length; i++) {
-        if (data['elements'][i]['slug'] == 'dropdown') {
+        if (data['elements'][i]['slug'] === 'dropdown') {
           result._children.push(this.dropdown(data['elements'][i]));
         } else {
           result._children.push({
@@ -989,7 +1001,7 @@ exports = module.exports = __webpack_require__(/*! ../../../laravel/node_modules
 
 
 // module
-exports.push([module.i, "\n.fade-enter-active[data-v-a94a1bf4],\n.fade-leave-active[data-v-a94a1bf4] {\n  -webkit-transition: opacity 0.3s;\n  transition: opacity 0.3s;\n}\n.fade-enter[data-v-a94a1bf4],\n.fade-leave-to[data-v-a94a1bf4] {\n  opacity: 0;\n}\n", ""]);
+exports.push([module.i, "\n.fade-enter-active[data-v-a94a1bf4],\n.fade-leave-active[data-v-a94a1bf4] {\n    -webkit-transition: opacity 0.3s;\n    transition: opacity 0.3s;\n}\n.fade-enter[data-v-a94a1bf4],\n.fade-leave-to[data-v-a94a1bf4] {\n    opacity: 0;\n}\n", ""]);
 
 // exports
 
@@ -1008,7 +1020,7 @@ exports = module.exports = __webpack_require__(/*! ../../../laravel/node_modules
 
 
 // module
-exports.push([module.i, "\n.c-icon[data-v-e0277fa4] {\n  margin-right: 0.3rem;\n}\n", ""]);
+exports.push([module.i, "\n.c-icon[data-v-e0277fa4] {\n    margin-right: 0.3rem;\n}\n", ""]);
 
 // exports
 
@@ -1098,13 +1110,13 @@ var render = function() {
         "CHeaderNavItem",
         { key: n.name },
         [
-          n._name == "CSidebarNavItem"
-            ? _c("CHeaderNavLink", { attrs: { href: "#" + n.href } }, [
-                _vm._v("\n      " + _vm._s(n.name) + "\n    ")
+          n._name === "CSidebarNavItem"
+            ? _c("CHeaderNavLink", { attrs: { href: n.href } }, [
+                _vm._v("\n            " + _vm._s(n.name) + "\n        ")
               ])
             : _vm._e(),
           _vm._v(" "),
-          n._name == "CSidebarNavDropdown"
+          n._name === "CSidebarNavDropdown"
             ? _c(
                 "CDropdown",
                 {
@@ -1117,7 +1129,9 @@ var render = function() {
                           return [
                             _c("a", { staticClass: "c-header-nav-link" }, [
                               _vm._v(
-                                "\n          " + _vm._s(n.name) + "\n        "
+                                "\n                    " +
+                                  _vm._s(n.name) +
+                                  "\n                "
                               )
                             ])
                           ]
@@ -1134,8 +1148,14 @@ var render = function() {
                   _vm._l(n._children, function(d) {
                     return _c(
                       "CDropdownItem",
-                      { key: d.name, attrs: { href: "#" + d.to } },
-                      [_vm._v("\n        " + _vm._s(d.name) + "\n      ")]
+                      { key: d.name, attrs: { to: d.to } },
+                      [
+                        _vm._v(
+                          "\n                " +
+                            _vm._s(d.name) +
+                            "\n            "
+                        )
+                      ]
                     )
                   })
                 ],
@@ -1242,20 +1262,18 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("CFooter", { attrs: { fixed: false } }, [
     _c("div", [
-      _c("a", { attrs: { href: "https://coreui.io", target: "_blank" } }, [
-        _vm._v("CoreUI")
-      ]),
+      _c("a", { attrs: { href: "#", target: "_blank" } }, [_vm._v("Arma")]),
       _vm._v(" "),
       _c("span", { staticClass: "ml-1" }, [
-        _vm._v("© " + _vm._s(new Date().getFullYear()) + " creativeLabs.")
+        _vm._v("© " + _vm._s(new Date().getFullYear()) + " ESCod")
       ])
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "ml-auto" }, [
       _c("span", { staticClass: "mr-1" }, [_vm._v("Powered by")]),
       _vm._v(" "),
-      _c("a", { attrs: { href: "https://coreui.io/vue", target: "_blank" } }, [
-        _vm._v("CoreUI for Vue")
+      _c("a", { attrs: { href: "https://escodgt.com", target: "_blank" } }, [
+        _vm._v("ESCod")
       ])
     ])
   ])
@@ -1409,7 +1427,7 @@ var render = function() {
                 _c("div", { staticClass: "c-avatar" }, [
                   _c("img", {
                     staticClass: "c-avatar-img ",
-                    attrs: { src: "img/avatars/6.jpg" }
+                    attrs: { src: "img/avatars/4.jpg" }
                   })
                 ])
               ])
@@ -1431,7 +1449,7 @@ var render = function() {
         "CDropdownItem",
         [
           _c("CIcon", { attrs: { name: "cil-bell" } }),
-          _vm._v(" Updates\n    "),
+          _vm._v("\n        Updates\n        "),
           _c("CBadge", { staticClass: "ml-auto", attrs: { color: "info" } }, [
             _vm._v(_vm._s(_vm.itemsCount))
           ])
@@ -1443,7 +1461,7 @@ var render = function() {
         "CDropdownItem",
         [
           _c("CIcon", { attrs: { name: "cil-envelope-open" } }),
-          _vm._v(" Messages\n    "),
+          _vm._v("\n        Messages\n        "),
           _c(
             "CBadge",
             { staticClass: "ml-auto", attrs: { color: "success" } },
@@ -1457,7 +1475,7 @@ var render = function() {
         "CDropdownItem",
         [
           _c("CIcon", { attrs: { name: "cil-task" } }),
-          _vm._v(" Tasks\n    "),
+          _vm._v("\n        Tasks\n        "),
           _c("CBadge", { staticClass: "ml-auto", attrs: { color: "danger" } }, [
             _vm._v(_vm._s(_vm.itemsCount))
           ])
@@ -1469,7 +1487,7 @@ var render = function() {
         "CDropdownItem",
         [
           _c("CIcon", { attrs: { name: "cil-comment-square" } }),
-          _vm._v(" Comments\n    "),
+          _vm._v("\n        Comments\n        "),
           _c(
             "CBadge",
             { staticClass: "ml-auto", attrs: { color: "warning" } },
@@ -1487,7 +1505,10 @@ var render = function() {
       _vm._v(" "),
       _c(
         "CDropdownItem",
-        [_c("CIcon", { attrs: { name: "cil-user" } }), _vm._v(" Profile\n  ")],
+        [
+          _c("CIcon", { attrs: { name: "cil-user" } }),
+          _vm._v("\n        Profile\n    ")
+        ],
         1
       ),
       _vm._v(" "),
@@ -1495,7 +1516,7 @@ var render = function() {
         "CDropdownItem",
         [
           _c("CIcon", { attrs: { name: "cil-settings" } }),
-          _vm._v(" Settings\n  ")
+          _vm._v("\n        Settings\n    ")
         ],
         1
       ),
@@ -1504,7 +1525,7 @@ var render = function() {
         "CDropdownItem",
         [
           _c("CIcon", { attrs: { name: "cil-dollar" } }),
-          _vm._v(" Payments\n    "),
+          _vm._v("\n        Payments\n        "),
           _c(
             "CBadge",
             { staticClass: "ml-auto", attrs: { color: "secondary" } },
@@ -1518,7 +1539,7 @@ var render = function() {
         "CDropdownItem",
         [
           _c("CIcon", { attrs: { name: "cil-file" } }),
-          _vm._v(" Projects\n    "),
+          _vm._v("\n        Projects\n        "),
           _c(
             "CBadge",
             { staticClass: "ml-auto", attrs: { color: "primary" } },
@@ -1534,7 +1555,7 @@ var render = function() {
         "CDropdownItem",
         [
           _c("CIcon", { attrs: { name: "cil-shield-alt" } }),
-          _vm._v(" Lock Account\n  ")
+          _vm._v("\n        Lock Account\n    ")
         ],
         1
       ),
@@ -1550,7 +1571,7 @@ var render = function() {
         },
         [
           _c("CIcon", { attrs: { name: "cil-lock-locked" } }),
-          _vm._v(" Logout\n  ")
+          _vm._v("\n        Logout\n    ")
         ],
         1
       )

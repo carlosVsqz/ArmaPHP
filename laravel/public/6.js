@@ -319,6 +319,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Table',
   props: {
@@ -360,6 +361,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Table_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Table.vue */ "../view/src/views/base/Table.vue");
 /* harmony import */ var _users_UsersData__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../users/UsersData */ "../view/src/views/users/UsersData.js");
+//
 //
 //
 //
@@ -489,7 +491,7 @@ var render = function() {
         [
           _vm._t("header", [
             _c("CIcon", { attrs: { name: "cil-grid" } }),
-            _vm._v(" " + _vm._s(_vm.caption) + "\n    ")
+            _vm._v("\n            " + _vm._s(_vm.caption) + "\n        ")
           ])
         ],
         2
@@ -580,7 +582,9 @@ var render = function() {
                     fn: function() {
                       return [
                         _c("CIcon", { attrs: { name: "cil-grid" } }),
-                        _vm._v(" Simple Table\n          "),
+                        _vm._v(
+                          "\n                    Simple Table\n                    "
+                        ),
                         _c("div", { staticClass: "card-header-actions" }, [
                           _c(
                             "a",

@@ -4,12 +4,41 @@ import Router from 'vue-router'
 // Containers
 const TheContainer = () => import('@/containers/TheContainer');
 
+// Views CRM
+const Clients = () => import('@/views/base/crm/Clients');
+const Returns = () => import('@/views/base/crm/Returns');
+// Views CRM sales
+const Sale = () => import('@/views/base/crm/sales/Sale');
+const Sales = () => import('@/views/base/crm/sales/Sales');
+const CreateSale = () => import('@/views/base/crm/sales/CreateSale');
+const EditSale = () => import('@/views/base/crm/sales/EditSale');
+
+// Views FRM
+const AccountsPay = () => import('@/views/base/frm/Accounts-for-pay');
+const AccountsReceivable = () => import('@/views/base/frm/Accounts-receivable');
+const Expenses = () => import('@/views/base/frm/Expenses');
+
+// Views HRM
+const Assists = () => import('@/views/base/hrm/Assists');
+const Charges = () => import('@/views/base/hrm/Charges');
+const Contracts = () => import('@/views/base/hrm/Contracts');
+const Employees = () => import('@/views/base/hrm/Employees');
+// eslint-disable-next-line no-unused-vars
+const Positions = () => import('@/views/base/hrm/Positions');
+const Roles_ = () => import('@/views/base/hrm/Roles');
+const Wages = () => import('@/views/base/hrm/Wages');
+
+// Views SCM
+const Brands_ = () => import('@/views/base/scm/Brands');
+const Inventories = () => import('@/views/base/scm/Inventories');
+const Products = () => import('@/views/base/scm/Products');
+const Purchases = () => import('@/views/base/scm/Purchases');
+const Suppliers = () => import('@/views/base/scm/Suppliers');
+
 // Views
 const Dashboard = () => import('@/views/Dashboard');
-
 const Colors = () => import('@/views/theme/Colors');
 const Typography = () => import('@/views/theme/Typography');
-
 const Charts = () => import('@/views/charts/Charts');
 const Widgets = () => import('@/views/widgets/Widgets');
 
@@ -108,20 +137,184 @@ const Media = () => import('@/views/media/Media');
 Vue.use(Router);
 
 export default new Router({
-    mode: 'hash', // https://router.vuejs.org/api/#mode
+    //mode: 'hash',     // for # into url's
+    mode: 'history',    // https://router.vuejs.org/api/#mode
     linkActiveClass: 'active',
     scrollBehavior: () => ({y: 0}),
     routes: configRoutes()
-})
+});
 
 function configRoutes() {
     return [
-
         {
             path: '/',
-            name: 'Home',
+            redirect: '/dashboard',
+            name: 'Inicio',
             component: TheContainer,
             children: [
+                {
+                    path: 'crm',
+                    redirect: 'crm/sales',
+                    name: 'CRM',
+                    component: {
+                        render(c) {
+                            return c('router-view')
+                        }
+                    },
+                    children: [
+                        {
+                            path: 'clients',
+                            name: 'Clientes',
+                            component: Clients
+                        },
+                        {
+                            path: 'returns',
+                            name: 'Devoluciones',
+                            component: Returns
+                        },
+                        {
+                            path: 'sales',
+                            meta: {label:'Ventas'},
+                            name: 'Ventas',
+                            component: {
+                                render(c) {
+                                    return c('router-view')
+                                }
+                            },
+                            children: [
+                                {
+                                    path: '',
+                                    component: Sales,
+                                },
+                                {
+                                    path: ':id',
+                                    meta: {label: 'Detalles de venta'},
+                                    name: 'Detalles de venta',
+                                    component: Sale,
+                                },
+                                {
+                                    path: 'create',
+                                    meta: {label: 'Generar venta'},
+                                    name: 'Nueva Venta',
+                                    component: CreateSale
+                                },
+                                {
+                                    path: ':id/edit',
+                                    meta: {label: 'Editar venta'},
+                                    name: 'Editar venta',
+                                    component: EditSale
+                                },
+                            ]
+                        },
+                    ]
+                },
+                {
+                    path: 'frm',
+                    redirect: 'frm/expenses',
+                    name: 'FRM',
+                    component: {
+                        render(c) {
+                            return c('router-view')
+                        }
+                    },
+                    children: [
+                        {
+                            path: 'accounts-for-pay',
+                            name: 'Cuentas por pagar',
+                            component: AccountsPay
+                        },
+                        {
+                            path: 'accounts-receivable',
+                            name: 'Cuentas por cobrar',
+                            component: AccountsReceivable
+                        },
+                        {
+                            path: 'expenses',
+                            name: 'Gastos',
+                            component: Expenses
+                        },
+                    ]
+                },
+                {
+                    path: 'hrm',
+                    redirect: 'hrm/assists',
+                    name: 'HRM',
+                    component: {
+                        render(c) {
+                            return c('router-view')
+                        }
+                    },
+                    children: [
+                        {
+                            path: 'assists',
+                            name: 'Asistencia',
+                            component: Assists
+                        },
+                        {
+                            path: 'charges',
+                            name: 'Cargos',
+                            component: Charges
+                        },
+                        {
+                            path: 'contracts',
+                            name: 'Contratos',
+                            component: Contracts
+                        },
+                        {
+                            path: 'employees',
+                            name: 'Empleados',
+                            component: Employees
+                        },
+                        {
+                            path: 'roles',
+                            name: 'Roles',
+                            component: Roles_
+                        },
+                        {
+                            path: 'wages',
+                            name: 'Salarios',
+                            component: Wages
+                        },
+                    ]
+                },
+                {
+                    path: 'scm',
+                    redirect: 'scm/products',
+                    name: 'SCM',
+                    component: {
+                        render(c) {
+                            return c('router-view')
+                        }
+                    },
+                    children:[
+                        {
+                            path: 'brands',
+                            name: 'Marcas',
+                            component: Brands_
+                        },
+                        {
+                            path: 'inventories',
+                            name: 'Inventario',
+                            component: Inventories
+                        },
+                        {
+                            path: 'products',
+                            name: 'Productos',
+                            component: Products
+                        },
+                        {
+                            path: 'purchases',
+                            name: 'Compras',
+                            component: Purchases
+                        },
+                        {
+                            path: 'suppliers',
+                            name: 'Proveedores',
+                            component: Suppliers
+                        },
+                    ]
+
+                },
                 {
                     path: 'media',
                     name: 'Media',

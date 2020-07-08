@@ -99,10 +99,12 @@ export default {
     },
     deleteUser ( id ) {
       let self = this;
+        // eslint-disable-next-line no-unused-vars
       let userId = id;
       axios.post(  '/api/users/' + id + '?token=' + localStorage.getItem("api_token"), {
         _method: 'DELETE'
       })
+          // eslint-disable-next-line no-unused-vars
       .then(function (response) {
           self.message = 'Successfully deleted user.';
           self.showAlert();

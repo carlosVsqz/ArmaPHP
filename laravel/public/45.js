@@ -1,17 +1,17 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[45],{
 
-/***/ "../view/src/views/icons/CoreUIIcons.vue":
-/*!***********************************************!*\
-  !*** ../view/src/views/icons/CoreUIIcons.vue ***!
-  \***********************************************/
+/***/ "../view/src/views/base/hrm/Positions.vue":
+/*!************************************************!*\
+  !*** ../view/src/views/base/hrm/Positions.vue ***!
+  \************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _CoreUIIcons_vue_vue_type_template_id_20bed96a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CoreUIIcons.vue?vue&type=template&id=20bed96a& */ "../view/src/views/icons/CoreUIIcons.vue?vue&type=template&id=20bed96a&");
-/* harmony import */ var _CoreUIIcons_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CoreUIIcons.vue?vue&type=script&lang=js& */ "../view/src/views/icons/CoreUIIcons.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _laravel_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../laravel/node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _Positions_vue_vue_type_template_id_999f3290_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Positions.vue?vue&type=template&id=999f3290&scoped=true& */ "../view/src/views/base/hrm/Positions.vue?vue&type=template&id=999f3290&scoped=true&");
+/* harmony import */ var _Positions_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Positions.vue?vue&type=script&lang=js& */ "../view/src/views/base/hrm/Positions.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _laravel_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../laravel/node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -20,120 +20,78 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_laravel_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _CoreUIIcons_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _CoreUIIcons_vue_vue_type_template_id_20bed96a___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _CoreUIIcons_vue_vue_type_template_id_20bed96a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _Positions_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Positions_vue_vue_type_template_id_999f3290_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Positions_vue_vue_type_template_id_999f3290_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
-  null,
+  "999f3290",
   null
   
 )
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "view/src/views/icons/CoreUIIcons.vue"
+component.options.__file = "view/src/views/base/hrm/Positions.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "../view/src/views/icons/CoreUIIcons.vue?vue&type=script&lang=js&":
-/*!************************************************************************!*\
-  !*** ../view/src/views/icons/CoreUIIcons.vue?vue&type=script&lang=js& ***!
-  \************************************************************************/
+/***/ "../view/src/views/base/hrm/Positions.vue?vue&type=script&lang=js&":
+/*!*************************************************************************!*\
+  !*** ../view/src/views/base/hrm/Positions.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _laravel_node_modules_babel_loader_lib_index_js_ref_4_0_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_CoreUIIcons_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../laravel/node_modules/babel-loader/lib??ref--4-0!../../../../laravel/node_modules/vue-loader/lib??vue-loader-options!./CoreUIIcons.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../view/src/views/icons/CoreUIIcons.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_laravel_node_modules_babel_loader_lib_index_js_ref_4_0_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_CoreUIIcons_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _laravel_node_modules_babel_loader_lib_index_js_ref_4_0_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_Positions_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../laravel/node_modules/babel-loader/lib??ref--4-0!../../../../../laravel/node_modules/vue-loader/lib??vue-loader-options!./Positions.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../view/src/views/base/hrm/Positions.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_laravel_node_modules_babel_loader_lib_index_js_ref_4_0_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_Positions_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "../view/src/views/icons/CoreUIIcons.vue?vue&type=template&id=20bed96a&":
-/*!******************************************************************************!*\
-  !*** ../view/src/views/icons/CoreUIIcons.vue?vue&type=template&id=20bed96a& ***!
-  \******************************************************************************/
+/***/ "../view/src/views/base/hrm/Positions.vue?vue&type=template&id=999f3290&scoped=true&":
+/*!*******************************************************************************************!*\
+  !*** ../view/src/views/base/hrm/Positions.vue?vue&type=template&id=999f3290&scoped=true& ***!
+  \*******************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_CoreUIIcons_vue_vue_type_template_id_20bed96a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../laravel/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../laravel/node_modules/vue-loader/lib??vue-loader-options!./CoreUIIcons.vue?vue&type=template&id=20bed96a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../view/src/views/icons/CoreUIIcons.vue?vue&type=template&id=20bed96a&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_CoreUIIcons_vue_vue_type_template_id_20bed96a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_Positions_vue_vue_type_template_id_999f3290_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../laravel/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../laravel/node_modules/vue-loader/lib??vue-loader-options!./Positions.vue?vue&type=template&id=999f3290&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../view/src/views/base/hrm/Positions.vue?vue&type=template&id=999f3290&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_Positions_vue_vue_type_template_id_999f3290_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_CoreUIIcons_vue_vue_type_template_id_20bed96a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_Positions_vue_vue_type_template_id_999f3290_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../view/src/views/icons/CoreUIIcons.vue?vue&type=script&lang=js&":
-/*!********************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!../view/src/views/icons/CoreUIIcons.vue?vue&type=script&lang=js& ***!
-  \********************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../view/src/views/base/hrm/Positions.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!../view/src/views/base/hrm/Positions.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _coreui_icons__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @coreui/icons */ "../view/node_modules/@coreui/icons/js/index.js");
 //
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'CoreUIIcons',
-  freeSet: _coreui_icons__WEBPACK_IMPORTED_MODULE_0__["freeSet"],
-  methods: {
-    toKebabCase: function toKebabCase(str) {
-      return str.replace(/([a-z])([A-Z0-9])/g, '$1-$2').toLowerCase();
-    }
-  }
+  name: "Positions"
 });
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../view/src/views/icons/CoreUIIcons.vue?vue&type=template&id=20bed96a&":
-/*!************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!../view/src/views/icons/CoreUIIcons.vue?vue&type=template&id=20bed96a& ***!
-  \************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../view/src/views/base/hrm/Positions.vue?vue&type=template&id=999f3290&scoped=true&":
+/*!*************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!../view/src/views/base/hrm/Positions.vue?vue&type=template&id=999f3290&scoped=true& ***!
+  \*************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -145,80 +103,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c(
-        "CCard",
-        [
-          _c(
-            "CCardHeader",
-            [
-              _c("CIcon", {
-                attrs: { content: _vm.$options.freeSet.cilHandPointDown }
-              }),
-              _vm._v("\n      CoreUI Icons\n      "),
-              _c("CBadge", { attrs: { color: "info" } }, [_vm._v("New")]),
-              _vm._v(" "),
-              _c("div", { staticClass: "card-header-actions" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass: "card-header-action",
-                    attrs: {
-                      href: "https://github.com/coreui/coreui-icons",
-                      rel: "noreferrer noopener",
-                      target: "_blank"
-                    }
-                  },
-                  [
-                    _c("small", { staticClass: "text-muted" }, [
-                      _vm._v("Github")
-                    ])
-                  ]
-                )
-              ])
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CCardBody",
-            [
-              _c(
-                "CRow",
-                { staticClass: "text-center" },
-                [
-                  _vm._l(_vm.$options.freeSet, function(icon, iconName) {
-                    return [
-                      _c(
-                        "CCol",
-                        {
-                          key: iconName,
-                          staticClass: "mb-5",
-                          attrs: { col: "3", sm: "2" }
-                        },
-                        [
-                          _c("CIcon", { attrs: { height: 42, content: icon } }),
-                          _vm._v(" "),
-                          _c("div", [_vm._v(_vm._s(_vm.toKebabCase(iconName)))])
-                        ],
-                        1
-                      )
-                    ]
-                  })
-                ],
-                2
-              )
-            ],
-            1
-          )
-        ],
-        1
-      )
-    ],
-    1
-  )
+  return _c("div")
 }
 var staticRenderFns = []
 render._withStripped = true
