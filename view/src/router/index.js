@@ -174,8 +174,7 @@ function configRoutes() {
                         },
                         {
                             path: 'sales',
-                            meta: {label:'Ventas'},
-                            name: 'Ventas',
+                            meta: {label: 'Ventas'},
                             component: {
                                 render(c) {
                                     return c('router-view')
@@ -187,16 +186,16 @@ function configRoutes() {
                                     component: Sales,
                                 },
                                 {
-                                    path: ':id',
-                                    meta: {label: 'Detalles de venta'},
-                                    name: 'Detalles de venta',
-                                    component: Sale,
-                                },
-                                {
                                     path: 'create',
                                     meta: {label: 'Generar venta'},
-                                    name: 'Nueva Venta',
+                                    name: 'Generar venta',
                                     component: CreateSale
+                                },
+                                {
+                                    path: ':id',
+                                    meta: {label: 'Detalle de venta'},
+                                    name: 'Detalle de venta',
+                                    component: Sale,
                                 },
                                 {
                                     path: ':id/edit',

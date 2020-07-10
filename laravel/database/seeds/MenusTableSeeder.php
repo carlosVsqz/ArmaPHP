@@ -179,7 +179,7 @@ class MenusTableSeeder extends Seeder
             $this->insertLink('admin', 'Proveedores', '/scm/suppliers');
         $this->endDropdown();
 
-        /* menu */
+        /* menu
         $this->insertTitle('user,admin', 'Components');
         $this->beginDropdown('user,admin', 'Base', '/base', 'cil-puzzle');
             $this->insertLink('user,admin', 'Breadcrumb',    '/base/breadcrumb');
@@ -199,7 +199,7 @@ class MenusTableSeeder extends Seeder
             $this->insertLink('user,admin', 'Tabs',          '/base/tabs');
             $this->insertLink('user,admin', 'Tooltips',      '/base/tooltips');
         $this->endDropdown();
-        /* end menu */
+        /* end menu
 
         $this->beginDropdown('user,admin', 'Buttons', '/buttons', 'cil-cursor');
             $this->insertLink('user,admin', 'Buttons',           '/buttons/buttons');

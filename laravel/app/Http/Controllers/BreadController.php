@@ -23,7 +23,8 @@ class BreadController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\JsonResponse
      */
     public function store(Request $request)
     {
@@ -44,7 +45,7 @@ class BreadController extends Controller
                     'options' => $formService->getFormOptions(),
                     'model'   => $request->input('model'),
                     'roles'   => $rolesService->get(),
-                ] ); 
+                ] );
             }
         }else{
             $validatedData = $request->validate([
@@ -65,7 +66,7 @@ class BreadController extends Controller
     {
         return response()->json( [
             'form' => Form::find($id),
-            'formFields' => FormField::where('form_id', '=', $id)->get(),    
+            'formFields' => FormField::where('form_id', '=', $id)->get(),
         ] );
     }
 
@@ -83,7 +84,7 @@ class BreadController extends Controller
             'formFields' => FormField::where('form_id', '=', $id)->get(),
             'options' => $formService->getFormOptions(),
             'roles'   => $rolesService->get(),
-            'formRoles' => $formService->getBreadRoles($id),    
+            'formRoles' => $formService->getBreadRoles($id),
         ]);
     }
 

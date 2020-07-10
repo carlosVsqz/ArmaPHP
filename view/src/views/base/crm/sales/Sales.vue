@@ -126,7 +126,6 @@
         {username: 'Félix Troels', registered: '2012/03/21', role: 'Staff', status: 'Active'},
         {username: 'Aulus Agmundr', registered: '2012/01/01', role: 'Member', status: 'Pending'}
     ];
-
     const fields = [
         {key: 'username', _style: 'min-width:200px'},
         'registered',
