@@ -132,23 +132,55 @@ class MenusTableSeeder extends Seeder
         ]);
         $this->menuId = DB::getPdo()->lastInsertId();  //set menuId
         /* guest menu */
-        $this->insertLink('guest,user,admin', 'Dashboard', '/', 'cil-speedometer');
+        $this->insertLink('guest,user,admin', 'Tablero', '/', 'cil-speedometer');
+
         $this->insertLink('guest', 'Login', '/login', 'cil-account-logout');
         $this->insertLink('guest', 'Register', '/register', 'cil-account-logout');
 
-        $this->beginDropdown('admin', 'Settings', '/', 'cil-puzzle');
-            $this->insertLink('admin', 'Media',    '/media');
-            $this->insertLink('admin', 'Users',    '/users');
+        /* menu Settings */
+        $this->beginDropdown('admin', 'Configuraciones', '/', 'cil-calculator');
+            $this->insertLink('admin', 'Medios',    '/media');
+            $this->insertLink('admin', 'Usuarios',    '/users');
             $this->insertLink('admin', 'Menu',    '/menu');
             $this->insertLink('admin', 'BREAD',    '/bread');
             $this->insertLink('admin', 'Email',    '/email');
         $this->endDropdown();
+        /* end menu Settings */
 
-        $this->insertTitle('user,admin', 'Theme');
-        $this->insertLink('user,admin', 'Colors', '/colors', 'cil-drop');
-        $this->insertLink('user,admin', 'Typography', '/typography', 'cil-pencil');
+        /* title menu Administration */
+        $this->insertTitle('admin', 'Componentes');
+
+        $this->beginDropdown('admin', 'CRM', '/crm', 'cil-star');
+            $this->insertLink('admin', 'Clientes', '/crm/clients');
+            $this->insertLink('admin', 'Devoluciones', '/crm/returns');
+            $this->insertLink('admin', 'Ventas', '/crm/sales');
+        $this->endDropdown();
+
+        $this->beginDropdown('admin', 'FRM', '/frm', 'cil-puzzle');
+            $this->insertLink('admin', 'Cuentas por Cobrar', '/frm/accounts-receivable');
+            $this->insertLink('admin', 'Cuentas por pagar', '/frm/accounts-for-pay');
+            $this->insertLink('admin', 'Gastos', '/frm/expenses');
+        $this->endDropdown();
+
+        $this->beginDropdown('admin', 'HRM', '/hrm', 'cil-people');
+            $this->insertLink('admin', 'Asistencias', '/hrm/assists');
+            $this->insertLink('admin', 'Cargos', '/hrm/charges');
+            $this->insertLink('admin', 'Contratos', '/hrm/contracts');
+            $this->insertLink('admin', 'Ajustes de rol', '/hrm/roles');
+            $this->insertLink('admin', 'Empleados', '/hrm/employees');
+            $this->insertLink('admin', 'Salarios', '/hrm/wages');
+        $this->endDropdown();
+
+        $this->beginDropdown('admin', 'SCM', '/scm', 'cil-cursor');
+            $this->insertLink('admin', 'Compras', '/scm/purchases');
+            $this->insertLink('admin', 'Inventario', '/scm/inventories');
+            $this->insertLink('admin', 'Marcas', '/scm/brands');
+            $this->insertLink('admin', 'Productos', '/scm/products');
+            $this->insertLink('admin', 'Proveedores', '/scm/suppliers');
+        $this->endDropdown();
+
+        /* menu */
         $this->insertTitle('user,admin', 'Components');
-
         $this->beginDropdown('user,admin', 'Base', '/base', 'cil-puzzle');
             $this->insertLink('user,admin', 'Breadcrumb',    '/base/breadcrumb');
             $this->insertLink('user,admin', 'Cards',         '/base/cards');
@@ -167,6 +199,7 @@ class MenusTableSeeder extends Seeder
             $this->insertLink('user,admin', 'Tabs',          '/base/tabs');
             $this->insertLink('user,admin', 'Tooltips',      '/base/tooltips');
         $this->endDropdown();
+        /* end menu */
 
         $this->beginDropdown('user,admin', 'Buttons', '/buttons', 'cil-cursor');
             $this->insertLink('user,admin', 'Buttons',           '/buttons/buttons');
@@ -181,8 +214,7 @@ class MenusTableSeeder extends Seeder
             $this->insertLink('user,admin', 'Flags',             '/icon/flags');
             $this->insertLink('user,admin', 'Brands',            '/icon/brands');
         $this->endDropdown();
-
-        $this->beginDropdown('user,admin', 'Notifications', '/notifications', 'cil-bell');
+            $this->beginDropdown('user,admin', 'Notifications', '/notifications', 'cil-bell');
             $this->insertLink('user,admin', 'Alerts',     '/notifications/alerts');
             $this->insertLink('user,admin', 'Badge',      '/notifications/badge');
             $this->insertLink('user,admin', 'Modals',     '/notifications/modals');
@@ -191,30 +223,38 @@ class MenusTableSeeder extends Seeder
         $this->insertLink('user,admin', 'Widgets', '/widgets', 'cil-calculator');
         $this->insertTitle('user,admin', 'Extras');
 
-        $id = $this->beginDropdown('user,admin', 'Pages', '/pages', 'cil-star');
-            $id = $this->insertLink('user,admin', 'Login',         '/login');
-            $id = $this->insertLink('user,admin', 'Register',      '/register');
-            $id = $this->insertLink('user,admin', 'Error 404',     '/404');
-            $id = $this->insertLink('user,admin', 'Error 500',     '/500');
-        $id = $this->endDropdown();
+        $this->beginDropdown('user,admin', 'Pages', '/pages', 'cil-star');
+            $this->insertLink('user,admin', 'Login',         '/login');
+            $this->insertLink('user,admin', 'Register',      '/register');
+            $this->insertLink('user,admin', 'Error 404',     '/404');
+            $this->insertLink('user,admin', 'Error 500',     '/500');
+        $this->endDropdown();
 
         /* Create top menu */
+        $this->insertTitle('user,admin', 'Tema');
+        $this->insertLink('user,admin', 'Colores', '/colors', 'cil-drop');
+        $this->insertLink('user,admin', 'Tipografía', '/typography', 'cil-pencil');
+
+
+        $this->insertTitle('user,admin', 'Extras');
+        $this->insertLink('user,admin', 'Reportes', '/reports', 'cil-chart-pie');
+
         DB::table('menulist')->insert([
             'name' => 'top_menu'
         ]);
 
         $this->menuId = DB::getPdo()->lastInsertId();  //set menuId
-        $this->beginDropdown('guest,user,admin', 'Pages');
-            $this->insertLink('guest,user,admin', 'Dashboard',    '/');
-            $this->insertLink('user,admin', 'Notes',              '/notes');
-            $this->insertLink('admin', 'Users',                   '/users');
+        $this->beginDropdown('guest,user,admin', 'Páginas');
+            $this->insertLink('guest,user,admin', 'Tablero',    '/');
+            $this->insertLink('user,admin', 'Notas',              '/notes');
+            $this->insertLink('admin', 'Usuarios',                   '/users');
         $this->endDropdown();
-        $this->beginDropdown('admin', 'Settings');
-            $this->insertLink('admin', 'Edit menu',               '/menu');
-            $this->insertLink('admin', 'Edit roles',              '/roles');
+        $this->beginDropdown('admin', 'Configuración');
+            $this->insertLink('admin', 'Editar menu',               '/menu');
+            $this->insertLink('admin', 'Editar roles',              '/roles');
             $this->insertLink('admin', 'Media',                   '/media');
             $this->insertLink('admin', 'BREAD',                   '/bread');
-            $this->insertLink('admin', 'E-mail',                  '/email');
+            $this->insertLink('admin', 'Email',                  '/email');
         $this->endDropdown();
 
         $this->joinAllByTransaction(); ///   <===== Must by use on end of this seeder

@@ -6,6 +6,8 @@ use Faker\Factory as Faker;
 use Illuminate\Support\Str;
 use Spatie\Permission\Models\Role;
 use App\User;
+use App\Models\Person;
+use App\Models\Client;
 use App\Models\RoleHierarchy;
 
 class UsersAndNotesSeeder extends Seeder
@@ -14,11 +16,16 @@ class UsersAndNotesSeeder extends Seeder
      * Run the database seeds.
      *
      * @return void
+     * @throws Exception
      */
+
     public function run()
     {
         $numberOfUsers = 10;
         $numberOfNotes = 100;
+        $numberOfPersons = 100;
+
+        $personID = array();
         $usersIds = array();
         $statusIds = array();
         $userStatus = array(
@@ -38,7 +45,7 @@ class UsersAndNotesSeeder extends Seeder
             'role_id' => $userRole->id,
             'hierarchy' => 2,
         ]);
-        $guestRole = Role::create(['name' => 'guest']); 
+        $guestRole = Role::create(['name' => 'guest']);
         RoleHierarchy::create([
             'role_id' => $guestRole->id,
             'hierarchy' => 3,
@@ -67,7 +74,7 @@ class UsersAndNotesSeeder extends Seeder
         ]);
         array_push($statusIds, DB::getPdo()->lastInsertId());
         /*  insert users   */
-        $user = User::create([ 
+        $user = User::create([
             'name' => 'admin',
             'email' => 'admin@admin.com',
             'email_verified_at' => now(),
@@ -78,6 +85,7 @@ class UsersAndNotesSeeder extends Seeder
         ]);
         $user->assignRole('user');
         $user->assignRole('admin');
+
         for($i = 0; $i<$numberOfUsers; $i++){
             $user = User::create([
                 'name' => $faker->name(),
@@ -106,5 +114,30 @@ class UsersAndNotesSeeder extends Seeder
                 'users_id'      => $usersIds[random_int(0,$numberOfUsers-1)]
             ]);
         }
+        /* insert persons */
+
+        for ($i =0; $i<$numberOfPersons; $i++){
+            $person = Person::create([
+                'first_name' => $faker->name(),
+                'last_name' => $faker->name(),
+                'surname' => $faker->lastName,
+                'last_surname' => $faker->lastName,
+                'direction' => Str::random(10),
+                'telephone' => 1234567,
+                'email' => $faker->unique()->safeEmail
+            ]);
+            array_push($personID, $person->id);
+        }
+
+        $clientID = array();
+
+        for($i = 1; $i<30; $i++ ){
+            $client = Client::create([
+                'people_id' => $i,
+                'nit' => Str::random(10)
+            ]);
+            array_push($clientID, $client->id);
+        }
+
     }
 }

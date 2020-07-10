@@ -8,7 +8,7 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^7.3",
+        "php": "^7.2",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^7.4",
         "laravel/tinker": "^2.0",
@@ -59,11 +59,7 @@
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
         "post-create-project-cmd": [
-            "@php artisan key:generate --ansi; "
-        ],
-        "post-update-cmd": [
-            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
-            "@php artisan optimize; @php artisan jwt:secret; @php artisan migrate:refresh --seed"
+            "@php artisan key:generate --ansi"
         ]
     }
 }

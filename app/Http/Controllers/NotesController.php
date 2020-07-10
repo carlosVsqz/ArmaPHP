@@ -51,6 +51,7 @@ class NotesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
     public function store(Request $request)
     {
         $validatedData = $request->validate([
@@ -61,6 +62,7 @@ class NotesController extends Controller
             'note_type'         => 'required|max:64'
         ]);
         $user = auth()->userOrFail();
+
         $note = new Notes();
         $note->title     = $request->input('title');
         $note->content   = $request->input('content');
