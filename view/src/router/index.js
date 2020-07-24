@@ -5,8 +5,15 @@ import Router from 'vue-router'
 const TheContainer = () => import('@/containers/TheContainer');
 
 // Views CRM
-const Clients = () => import('@/views/base/crm/Clients');
+// Views CRM clients
+const Client = () => import('@/views/base/crm/clients/Client');
+const Clients = () => import('@/views/base/crm/clients/Clients');
+const CreateClient = () => import('@/views/base/crm/clients/CreateClient');
+const EditClient = () => import('@/views/base/crm/clients/EditClient');
+
+// Views CRM returns
 const Returns = () => import('@/views/base/crm/Returns');
+
 // Views CRM sales
 const Sale = () => import('@/views/base/crm/sales/Sale');
 const Sales = () => import('@/views/base/crm/sales/Sales');
@@ -164,8 +171,36 @@ function configRoutes() {
                     children: [
                         {
                             path: 'clients',
-                            name: 'Clientes',
-                            component: Clients
+                            meta: {label: 'Clients'},
+                            component: {
+                                render(c) {
+                                    return c('router-view')
+                                }
+                            },
+                            children: [
+                                {
+                                    path: '',
+                                    component: Clients,
+                                },
+                                {
+                                    path: 'create',
+                                    meta: {label: 'Agregar nuevo cliente'},
+                                    name: 'Agregar nuevo cliente',
+                                    component: CreateClient
+                                },
+                                {
+                                    path: ':id',
+                                    meta: {label: 'Detalle del cliente'},
+                                    name: 'Detalle del clinte',
+                                    component: Client,
+                                },
+                                {
+                                    path: ':id/edit',
+                                    meta: {label: 'Editar Cliente'},
+                                    name: 'Editar cliente',
+                                    component: EditClient
+                                },
+                            ]
                         },
                         {
                             path: 'returns',

@@ -1,1 +1,234 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[69],{518:function(e,t,n){"use strict";n.r(t);var o=n(2),a=n.n(o),s={name:"EditMenu",data:function(){return{name:"",message:"",dismissSecs:7,dismissCountDown:0}},methods:{goBack:function(){this.$router.go(-1)},update:function(){var e=this;a.a.post("/api/menu/menu/update?token="+localStorage.getItem("api_token"),{name:e.name,id:e.$route.params.id}).then((function(t){e.message="Successfully updated note.",e.showAlert()})).catch((function(t){if("The given data was invalid."==t.response.data.message){for(var n in e.message="",t.response.data.errors)t.response.data.errors.hasOwnProperty(n)&&(e.message+=t.response.data.errors[n][0]+"  ");e.showAlert()}else console.log(t),e.$router.push({path:"/login"})}))},showAlert:function(){this.dismissCountDown=this.dismissSecs}},mounted:function(){var e=this;a.a.get("/api/menu/menu/edit?token="+localStorage.getItem("api_token")+"&id="+e.$route.params.id).then((function(t){e.name=t.data.menulist.name})).catch((function(t){console.log(t),e.$router.push({path:"/login"})}))}},r=n(0),i=Object(r.a)(s,(function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("CRow",[n("CCol",{attrs:{col:"12",lg:"6"}},[n("CCard",[n("CCardBody",[n("h3",[e._v("\n          Edit Menu\n        ")]),e._v(" "),n("CAlert",{attrs:{show:e.dismissCountDown,color:"primary",fade:""},on:{"update:show":function(t){e.dismissCountDown=t}}},[e._v("\n          ("+e._s(e.dismissCountDown)+") "+e._s(e.message)+"\n        ")]),e._v(" "),n("CInput",{attrs:{label:"Name",type:"text",placeholder:"Name"},model:{value:e.name,callback:function(t){e.name=t},expression:"name"}}),e._v(" "),n("CButton",{attrs:{color:"primary"},on:{click:function(t){return e.update()}}},[e._v("Save")]),e._v(" "),n("CButton",{attrs:{color:"primary"},on:{click:e.goBack}},[e._v("Back")])],1)],1)],1)],1)}),[],!1,null,null,null);t.default=i.exports}}]);
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[69],{
+
+/***/ "../view/src/views/icons/CoreUIIcons.vue":
+/*!***********************************************!*\
+  !*** ../view/src/views/icons/CoreUIIcons.vue ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _CoreUIIcons_vue_vue_type_template_id_20bed96a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CoreUIIcons.vue?vue&type=template&id=20bed96a& */ "../view/src/views/icons/CoreUIIcons.vue?vue&type=template&id=20bed96a&");
+/* harmony import */ var _CoreUIIcons_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CoreUIIcons.vue?vue&type=script&lang=js& */ "../view/src/views/icons/CoreUIIcons.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _laravel_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../laravel/node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_laravel_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _CoreUIIcons_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _CoreUIIcons_vue_vue_type_template_id_20bed96a___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _CoreUIIcons_vue_vue_type_template_id_20bed96a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "view/src/views/icons/CoreUIIcons.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "../view/src/views/icons/CoreUIIcons.vue?vue&type=script&lang=js&":
+/*!************************************************************************!*\
+  !*** ../view/src/views/icons/CoreUIIcons.vue?vue&type=script&lang=js& ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _laravel_node_modules_babel_loader_lib_index_js_ref_4_0_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_CoreUIIcons_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../laravel/node_modules/babel-loader/lib??ref--4-0!../../../../laravel/node_modules/vue-loader/lib??vue-loader-options!./CoreUIIcons.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../view/src/views/icons/CoreUIIcons.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_laravel_node_modules_babel_loader_lib_index_js_ref_4_0_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_CoreUIIcons_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "../view/src/views/icons/CoreUIIcons.vue?vue&type=template&id=20bed96a&":
+/*!******************************************************************************!*\
+  !*** ../view/src/views/icons/CoreUIIcons.vue?vue&type=template&id=20bed96a& ***!
+  \******************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_CoreUIIcons_vue_vue_type_template_id_20bed96a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../laravel/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../laravel/node_modules/vue-loader/lib??vue-loader-options!./CoreUIIcons.vue?vue&type=template&id=20bed96a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../view/src/views/icons/CoreUIIcons.vue?vue&type=template&id=20bed96a&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_CoreUIIcons_vue_vue_type_template_id_20bed96a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_CoreUIIcons_vue_vue_type_template_id_20bed96a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../view/src/views/icons/CoreUIIcons.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!../view/src/views/icons/CoreUIIcons.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _coreui_icons__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @coreui/icons */ "../view/node_modules/@coreui/icons/js/index.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'CoreUIIcons',
+  freeSet: _coreui_icons__WEBPACK_IMPORTED_MODULE_0__["freeSet"],
+  methods: {
+    toKebabCase: function toKebabCase(str) {
+      return str.replace(/([a-z])([A-Z0-9])/g, '$1-$2').toLowerCase();
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../view/src/views/icons/CoreUIIcons.vue?vue&type=template&id=20bed96a&":
+/*!************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!../view/src/views/icons/CoreUIIcons.vue?vue&type=template&id=20bed96a& ***!
+  \************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c(
+        "CCard",
+        [
+          _c(
+            "CCardHeader",
+            [
+              _c("CIcon", {
+                attrs: { content: _vm.$options.freeSet.cilHandPointDown }
+              }),
+              _vm._v("\n            CoreUI Icons\n            "),
+              _c("CBadge", { attrs: { color: "info" } }, [_vm._v("New")]),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-header-actions" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "card-header-action",
+                    attrs: {
+                      href: "https://github.com/coreui/coreui-icons",
+                      rel: "noreferrer noopener",
+                      target: "_blank"
+                    }
+                  },
+                  [
+                    _c("small", { staticClass: "text-muted" }, [
+                      _vm._v("Github")
+                    ])
+                  ]
+                )
+              ])
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "CCardBody",
+            [
+              _c(
+                "CRow",
+                { staticClass: "text-center" },
+                [
+                  _vm._l(_vm.$options.freeSet, function(icon, iconName) {
+                    return [
+                      _c(
+                        "CCol",
+                        {
+                          key: iconName,
+                          staticClass: "mb-5",
+                          attrs: { col: "3", sm: "2" }
+                        },
+                        [
+                          _c("CIcon", { attrs: { height: 42, content: icon } }),
+                          _vm._v(" "),
+                          _c("div", [
+                            _vm._v(_vm._s(_vm.toKebabCase(iconName)))
+                          ]),
+                          _vm._v(" "),
+                          _c("div", [_vm._v(_vm._s(iconName))])
+                        ],
+                        1
+                      )
+                    ]
+                  })
+                ],
+                2
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ })
+
+}]);

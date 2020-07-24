@@ -1,1 +1,555 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[76],{523:function(t,e,o){"use strict";o.r(e);var n=o(2),s=o.n(n),a={name:"EditUser",props:{caption:{type:String,default:"User id"}},data:function(){return{note:{title:"",content:"",applies_to_date:"",status_id:null,note_type:""},statuses:[],message:"",dismissSecs:7,dismissCountDown:0,showDismissibleAlert:!1}},methods:{goBack:function(){this.$router.go(-1)},store:function(){var t=this;s.a.post("/api/notes?token="+localStorage.getItem("api_token"),t.note).then((function(e){t.note={title:"",content:"",applies_to_date:"",status_id:null,note_type:""},t.message="Successfully created note.",t.showAlert()})).catch((function(e){if("The given data was invalid."==e.response.data.message){for(var o in t.message="",e.response.data.errors)e.response.data.errors.hasOwnProperty(o)&&(t.message+=e.response.data.errors[o][0]+"  ");t.showAlert()}else console.log(e),t.$router.push({path:"login"})}))},countDownChanged:function(t){this.dismissCountDown=t},showAlert:function(){this.dismissCountDown=this.dismissSecs}},mounted:function(){var t=this;s.a.get("/api/notes/create?token="+localStorage.getItem("api_token")).then((function(e){t.statuses=e.data})).catch((function(e){console.log(e),t.$router.push({path:"login"})}))}},i=o(0),l=Object(i.a)(a,(function(){var t=this,e=t.$createElement,o=t._self._c||e;return o("CRow",[o("CCol",{attrs:{col:"12",lg:"6"}},[o("CCard",{attrs:{"no-header":""}},[o("CCardBody",[o("h3",[t._v("\n          Create Note\n        ")]),t._v(" "),o("CAlert",{attrs:{show:t.dismissCountDown,color:"primary",fade:""},on:{"update:show":function(e){t.dismissCountDown=e}}},[t._v("\n          ("+t._s(t.dismissCountDown)+") "+t._s(t.message)+"\n        ")]),t._v(" "),o("CInput",{attrs:{label:"Title",type:"text",placeholder:"Title"},model:{value:t.note.title,callback:function(e){t.$set(t.note,"title",e)},expression:"note.title"}}),t._v(" "),o("CInput",{attrs:{textarea:"true",label:"Content",rows:9,placeholder:"Content.."},model:{value:t.note.content,callback:function(e){t.$set(t.note,"content",e)},expression:"note.content"}}),t._v(" "),o("CInput",{attrs:{label:"Applies to date",type:"date"},model:{value:t.note.applies_to_date,callback:function(e){t.$set(t.note,"applies_to_date",e)},expression:"note.applies_to_date"}}),t._v(" "),o("CSelect",{attrs:{label:"Status",value:t.note.status_id,plain:!0,options:t.statuses},on:{"update:value":function(e){return t.$set(t.note,"status_id",e)}}}),t._v(" "),o("CInput",{attrs:{label:"Note type",type:"text"},model:{value:t.note.note_type,callback:function(e){t.$set(t.note,"note_type",e)},expression:"note.note_type"}}),t._v(" "),o("CButton",{attrs:{color:"primary"},on:{click:function(e){return t.store()}}},[t._v("Create")]),t._v(" "),o("CButton",{attrs:{color:"primary"},on:{click:t.goBack}},[t._v("Back")])],1)],1)],1)],1)}),[],!1,null,null,null);e.default=l.exports}}]);
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[76],{
+
+/***/ "../view/src/views/menuElements/CreateMenuElement.vue":
+/*!************************************************************!*\
+  !*** ../view/src/views/menuElements/CreateMenuElement.vue ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _CreateMenuElement_vue_vue_type_template_id_f2ad69c0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CreateMenuElement.vue?vue&type=template&id=f2ad69c0& */ "../view/src/views/menuElements/CreateMenuElement.vue?vue&type=template&id=f2ad69c0&");
+/* harmony import */ var _CreateMenuElement_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CreateMenuElement.vue?vue&type=script&lang=js& */ "../view/src/views/menuElements/CreateMenuElement.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _laravel_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../laravel/node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_laravel_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _CreateMenuElement_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _CreateMenuElement_vue_vue_type_template_id_f2ad69c0___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _CreateMenuElement_vue_vue_type_template_id_f2ad69c0___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "view/src/views/menuElements/CreateMenuElement.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "../view/src/views/menuElements/CreateMenuElement.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************!*\
+  !*** ../view/src/views/menuElements/CreateMenuElement.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _laravel_node_modules_babel_loader_lib_index_js_ref_4_0_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_CreateMenuElement_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../laravel/node_modules/babel-loader/lib??ref--4-0!../../../../laravel/node_modules/vue-loader/lib??vue-loader-options!./CreateMenuElement.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../view/src/views/menuElements/CreateMenuElement.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_laravel_node_modules_babel_loader_lib_index_js_ref_4_0_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_CreateMenuElement_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "../view/src/views/menuElements/CreateMenuElement.vue?vue&type=template&id=f2ad69c0&":
+/*!*******************************************************************************************!*\
+  !*** ../view/src/views/menuElements/CreateMenuElement.vue?vue&type=template&id=f2ad69c0& ***!
+  \*******************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_CreateMenuElement_vue_vue_type_template_id_f2ad69c0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../laravel/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../laravel/node_modules/vue-loader/lib??vue-loader-options!./CreateMenuElement.vue?vue&type=template&id=f2ad69c0& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../view/src/views/menuElements/CreateMenuElement.vue?vue&type=template&id=f2ad69c0&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_CreateMenuElement_vue_vue_type_template_id_f2ad69c0___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_CreateMenuElement_vue_vue_type_template_id_f2ad69c0___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../view/src/views/menuElements/CreateMenuElement.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!../view/src/views/menuElements/CreateMenuElement.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "../view/node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'CreateMenuElement',
+  data: function data() {
+    return {
+      role: [],
+      menulist: [],
+      parents: [],
+      types: [{
+        label: 'Link',
+        value: 'link'
+      }, {
+        label: 'Title',
+        value: 'title'
+      }, {
+        label: 'Dropdown',
+        value: 'dropdown'
+      }],
+      menuelement: {
+        menu: 0,
+        name: '',
+        role: [],
+        type: 'link',
+        href: '',
+        icon: '',
+        parent: 0
+      },
+      message: '',
+      dismissSecs: 7,
+      dismissCountDown: 0,
+      showDismissibleAlert: false,
+      divHref: false,
+      divDropdownParent: false,
+      divIcon: false
+    };
+  },
+  methods: {
+    goBack: function goBack() {
+      this.$router.go(-1); // this.$router.replace({path: '/users'})
+    },
+    selectRadioSelectRole: function selectRadioSelectRole(role) {
+      var temp = this.menuelement.role.indexOf(role);
+
+      if (temp > -1) {
+        this.menuelement.role.splice(temp, 1);
+      } else {
+        this.menuelement.role.push(role);
+      }
+    },
+    changeType: function changeType() {
+      var temp = this.menuelement.type;
+
+      if (temp == 'title') {
+        this.divHref = false;
+        this.divDropdownParent = false;
+        this.divIcon = false;
+      } else if (temp == 'link') {
+        this.divHref = true;
+        this.divDropdownParent = true;
+        this.divIcon = true;
+      } else {
+        this.divHref = false;
+        this.divDropdownParent = true;
+        this.divIcon = true;
+      }
+    },
+    updateSelectParent: function updateSelectParent() {
+      var self = this;
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/menu/element/get-parents?token=' + localStorage.getItem("api_token") + '&menu=' + self.menuelement.menu).then(function (response) {
+        self.parents = [{
+          label: 'Has no parent',
+          value: 'none'
+        }];
+
+        for (var i = 0; i < response.data.length; i++) {
+          self.parents.push(response.data[i]);
+        }
+      })["catch"](function (error) {
+        console.log(error);
+        self.$router.push({
+          path: 'login'
+        });
+      });
+    },
+    store: function store() {
+      var self = this;
+      console.log(self.menuelement);
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/menu/element/store?token=' + localStorage.getItem("api_token"), self.menuelement).then(function (response) {
+        self.name = '';
+        self.message = 'Successfully created menu element.';
+        self.showAlert();
+      })["catch"](function (error) {
+        if (error.response.data.message == 'The given data was invalid.') {
+          self.message = '';
+
+          for (var key in error.response.data.errors) {
+            if (error.response.data.errors.hasOwnProperty(key)) {
+              self.message += error.response.data.errors[key][0] + '  ';
+            }
+          }
+
+          self.showAlert();
+        } else {
+          console.log(error);
+          self.$router.push({
+            path: 'login'
+          });
+        }
+      });
+    },
+    countDownChanged: function countDownChanged(dismissCountDown) {
+      this.dismissCountDown = dismissCountDown;
+    },
+    showAlert: function showAlert() {
+      this.dismissCountDown = this.dismissSecs;
+    },
+    getData: function getData() {
+      var self = this;
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/menu/element/create?token=' + localStorage.getItem("api_token") + '&id=' + self.$route.params.menu).then(function (response) {
+        self.role = response.data.roles;
+        self.menulist = response.data.menulist;
+      })["catch"](function (error) {
+        console.log(error);
+        self.$router.push({
+          path: '/login'
+        });
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.getData();
+    this.menuelement.menu = this.$route.params.menu;
+    this.updateSelectParent();
+    this.changeType();
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../view/src/views/menuElements/CreateMenuElement.vue?vue&type=template&id=f2ad69c0&":
+/*!*************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!../view/src/views/menuElements/CreateMenuElement.vue?vue&type=template&id=f2ad69c0& ***!
+  \*************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "CRow",
+    [
+      _c(
+        "CCol",
+        { attrs: { col: "12", lg: "6" } },
+        [
+          _c(
+            "CCard",
+            { attrs: { "no-header": "" } },
+            [
+              _c(
+                "CCardBody",
+                [
+                  _c("h3", [
+                    _vm._v("\n          Create Menu Element\n        ")
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "CAlert",
+                    {
+                      attrs: {
+                        show: _vm.dismissCountDown,
+                        color: "primary",
+                        fade: ""
+                      },
+                      on: {
+                        "update:show": function($event) {
+                          _vm.dismissCountDown = $event
+                        }
+                      }
+                    },
+                    [
+                      _vm._v(
+                        "\n          (" +
+                          _vm._s(_vm.dismissCountDown) +
+                          ") " +
+                          _vm._s(_vm.message) +
+                          "\n        "
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("CSelect", {
+                    attrs: {
+                      label: "Menu",
+                      value: _vm.menuelement.menu,
+                      plain: true,
+                      options: _vm.menulist
+                    },
+                    on: {
+                      "update:value": [
+                        function($event) {
+                          return _vm.$set(_vm.menuelement, "menu", $event)
+                        },
+                        function($event) {
+                          return _vm.updateSelectParent()
+                        }
+                      ]
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("p", [_vm._v("Roles")]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "m-3" },
+                    _vm._l(_vm.role, function(rol) {
+                      return _c("CInputCheckbox", {
+                        key: rol,
+                        attrs: { label: rol, name: "selectRoles" },
+                        on: {
+                          "update:checked": function($event) {
+                            return _vm.selectRadioSelectRole(rol)
+                          }
+                        }
+                      })
+                    }),
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("CInput", {
+                    attrs: { label: "Name", type: "text", placeholder: "Name" },
+                    model: {
+                      value: _vm.menuelement.name,
+                      callback: function($$v) {
+                        _vm.$set(_vm.menuelement, "name", $$v)
+                      },
+                      expression: "menuelement.name"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("CSelect", {
+                    attrs: {
+                      label: "Type",
+                      value: _vm.menuelement.type,
+                      plain: true,
+                      options: _vm.types
+                    },
+                    on: {
+                      "update:value": [
+                        function($event) {
+                          return _vm.$set(_vm.menuelement, "type", $event)
+                        },
+                        function($event) {
+                          return _vm.changeType()
+                        }
+                      ]
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("p", [_vm._v("Other")]),
+                  _vm._v(" "),
+                  _vm.divHref
+                    ? _c(
+                        "div",
+                        [
+                          _c("CInput", {
+                            attrs: {
+                              label: "Href",
+                              type: "text",
+                              placeholder: "Href"
+                            },
+                            model: {
+                              value: _vm.menuelement.href,
+                              callback: function($$v) {
+                                _vm.$set(_vm.menuelement, "href", $$v)
+                              },
+                              expression: "menuelement.href"
+                            }
+                          })
+                        ],
+                        1
+                      )
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _vm.divDropdownParent
+                    ? _c(
+                        "div",
+                        [
+                          _c("CSelect", {
+                            attrs: {
+                              label: "Dropdown parent",
+                              value: _vm.menuelement.parent,
+                              plain: true,
+                              options: _vm.parents
+                            },
+                            on: {
+                              "update:value": function($event) {
+                                return _vm.$set(
+                                  _vm.menuelement,
+                                  "parent",
+                                  $event
+                                )
+                              }
+                            }
+                          })
+                        ],
+                        1
+                      )
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _vm.divIcon
+                    ? _c(
+                        "div",
+                        [
+                          _vm._v(
+                            "\n            Icon - Find icon class in: \n            "
+                          ),
+                          _c(
+                            "a",
+                            {
+                              attrs: {
+                                href:
+                                  "https://coreui.io/docs/icons/icons-list/#coreui-icons-free-502-icons",
+                                target: "_blank"
+                              }
+                            },
+                            [
+                              _vm._v(
+                                "\n              CoreUI icons documentation\n            "
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("br"),
+                          _vm._v(" "),
+                          _c("CInput", {
+                            attrs: {
+                              type: "text",
+                              placeholder:
+                                "CoreUI Icon class - example: cil-bell"
+                            },
+                            model: {
+                              value: _vm.menuelement.icon,
+                              callback: function($$v) {
+                                _vm.$set(_vm.menuelement, "icon", $$v)
+                              },
+                              expression: "menuelement.icon"
+                            }
+                          })
+                        ],
+                        1
+                      )
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _c(
+                    "CButton",
+                    {
+                      attrs: { color: "primary" },
+                      on: {
+                        click: function($event) {
+                          return _vm.store()
+                        }
+                      }
+                    },
+                    [_vm._v("Create")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "CButton",
+                    { attrs: { color: "primary" }, on: { click: _vm.goBack } },
+                    [_vm._v("Back")]
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ })
+
+}]);

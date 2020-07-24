@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use App\Models\Notes;
+use App\Models\Client;
 use App\Models\Person;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -36,32 +37,33 @@ class ClientsController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'title' => 'required|min:1|max:64',
-            'content' => 'required|max:1024',
-            'status_id' => 'required',
-            'applies_to_date' => 'required|date_format:Y-m-d',
-            'note_type' => 'required|max:64'
+            'first_name'    => 'required|min:1|max:64',
+            'last_name'     => 'required|max:1024',
+            'surname'       => 'required',
+            'last_surname'  => 'required|max:50',
+            'direction'     => 'required|max:64',
+            'email'         => 'required',
+            'nit'           => 'required|min:8|max:20'
         ]);
 
         $people = Person::create([
-            'first_name' => $request->first_name,
-            'last_name' => $request->last_name,
-            'surname' => $request->surname,
-            'last_surname' => $request->last_surname,
-            'direction' => $request->direction,
-            'telephone' => $request->telephone,
-            'email' => $request->email,
+            'first_name'    => $request->input('first_name'),
+            'last_name'     => $request->input('last_name'),
+            'surname'       => $request->input('surname'),
+            'last_surname'  => $request->input('last_surname'),
+            'direction'     => $request->input('direction'),
+            'telephone'     => $request->input('telephone'),
+            'email'         => $request->input('email'),
         ]);
 
          $client = new Client();
          $client->nit = $request->nit;
          $client->people_id = $people->id;
 
-         if ($client->save()){
+         if ($client->save())
              return response()->json(['status' => 'success']);
-         }else{
+         else
              return response()->json(['status' => 'error']);
-         }
     }
 
     public function show($id)
@@ -89,12 +91,15 @@ class ClientsController extends Controller
         //var_dump('bazinga');
         //die();
         $validatedData = $request->validate([
-            'title' => 'required|min:1|max:64',
-            'content' => 'required|max:1024',
-            'status_id' => 'required',
-            'applies_to_date' => 'required|date_format:Y-m-d',
-            'note_type' => 'required|max:64'
+            'first_name'    => 'required|min:1|max:64',
+            'last_name'     => 'required|max:1024',
+            'surname'       => 'required',
+            'last_surname'  => 'required|max:50',
+            'direction'     => 'required|max:64',
+            'email'         => 'required',
+            'nit'           => 'required|min:8|max:20'
         ]);
+
         $note = Notes::find($id);
         $note->title = $request->input('title');
         $note->content = $request->input('content');
