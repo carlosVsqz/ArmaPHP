@@ -32,6 +32,7 @@ class Handler extends ExceptionHandler
      * @param  \Exception  $exception
      * @return void
      */
+
     public function report(Throwable $exception)
     {
         parent::report($exception);
@@ -48,4 +49,5 @@ class Handler extends ExceptionHandler
     {
         return parent::render($request, $exception);
     }
+
 }

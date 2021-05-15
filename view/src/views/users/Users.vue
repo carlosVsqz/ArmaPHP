@@ -65,7 +65,7 @@ export default {
       you: null,
       message: '',
       showMessage: false,
-      dismissSecs: 7,
+      dismissSecs: 3,
       dismissCountDown: 0,
       showDismissibleAlert: false
     }

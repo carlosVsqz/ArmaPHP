@@ -43,21 +43,8 @@
                 </CInput>
                 <CButton type="submit" color="success" block>Create Account</CButton>
               </CForm>
+              <CButton @click="goBack"  color="link" block> Login </CButton>
             </CCardBody>
-            <CCardFooter class="p-4">
-              <CRow>
-                <CCol col="6">
-                  <CButton block color="facebook">
-                    Facebook
-                  </CButton>
-                </CCol>
-                <CCol col="6">
-                  <CButton block color="twitter">
-                    Twitter
-                  </CButton>
-                </CCol>
-              </CRow>
-            </CCardFooter>
           </CCard>
         </CCol>
       </CRow>
@@ -75,8 +62,11 @@
           password: '',
           password_confirmation: ''
         }
-      },    
+      },
       methods: {
+        goBack() {
+          this.$router.go(-1)
+        },
         register() {
           var self = this;
           axios.post(  '/api/register', {
@@ -95,9 +85,9 @@
           .catch(function (error) {
             console.log(error);
           });
-  
+
         }
       }
     }
-  
+
   </script>

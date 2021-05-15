@@ -15,10 +15,6 @@
             />
         </CSidebarBrand>
         <CRenderFunction flat :content-to-render="nav"/>
-        <CSidebarMinimizer
-                class="d-md-down-none"
-                @click.native="$store.commit('set', ['sidebarMinimize', !minimize])"
-        />
     </CSidebar>
 </template>
 
@@ -29,9 +25,7 @@
         name: 'TheSidebar',
         data() {
             return {
-                //minimize: false,
                 nav: [],
-                //show: true,
                 buffor: [],
             }
         },

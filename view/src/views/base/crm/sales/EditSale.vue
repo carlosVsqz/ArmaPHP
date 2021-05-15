@@ -112,12 +112,4 @@
             });
         }
     }
-
-    /*
-          items: (id) => {
-            const user = usersData.find( user => user.id.toString() === id)
-            const userDetails = user ? Object.entries(user) : [['id', 'Not found']]
-            return userDetails.map(([key, value]) => {return {key: key, value: value}})
-          },
-    */
 </script>

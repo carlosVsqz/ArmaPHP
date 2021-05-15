@@ -39,9 +39,7 @@
         name: 'Menu',
         data() {
             return {
-                //minimize: false,
                 nav: [],
-                //show: true,
                 buffor: [],
             }
         },

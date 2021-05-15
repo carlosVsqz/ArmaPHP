@@ -14,25 +14,11 @@
             <CIcon name="logo" height="48" alt="Logo"/>
         </CHeaderBrand>
 
-        <CMenu/>
+      <CHeaderNav class="d-md-down-none mr-auto">
+      </CHeaderNav>
 
-        <CHeaderNav class="mr-4"
+        <CHeaderNav class="flex-md-row-reverse"
         >
-            <CHeaderNavItem class="d-md-down-none mx-2">
-                <CHeaderNavLink>
-                    <CIcon name="cil-bell"/>
-                </CHeaderNavLink>
-            </CHeaderNavItem>
-            <CHeaderNavItem class="d-md-down-none mx-2">
-                <CHeaderNavLink>
-                    <CIcon name="cil-list"/>
-                </CHeaderNavLink>
-            </CHeaderNavItem>
-            <CHeaderNavItem class="d-md-down-none mx-2">
-                <CHeaderNavLink>
-                    <CIcon name="cil-envelope-open"/>
-                </CHeaderNavLink>
-            </CHeaderNavItem>
             <TheHeaderDropdownAccnt/>
         </CHeaderNav>
         <CSubheader class="px-3">
@@ -42,14 +28,12 @@
 </template>
 
 <script>
-    import CMenu from './Menu'
     import TheHeaderDropdownAccnt from './TheHeaderDropdownAccnt'
 
     export default {
         name: 'TheHeader',
         components: {
-            TheHeaderDropdownAccnt,
-            CMenu
+            TheHeaderDropdownAccnt
         }
     }
 </script>

@@ -36,26 +36,18 @@
                                     <CCol col="6" class="text-right">
                                         <CButton color="link" class="px-0">Forgot password?</CButton>
                                     </CCol>
+                                    <CCol col="12" class="text-right">
+                                      <CButton
+                                          color="link"
+                                          class="active mt-3"
+                                          @click="goRegister()"
+                                      >
+                                        Register Now!
+                                      </CButton>
+                                    </CCol>
                                 </CRow>
                             </CForm>
                         </CCardBody>
-                    </CCard>
-                    <CCard
-                            color="primary"
-                            text-color="white"
-                            class="text-center py-5 d-md-down-none"
-                            body-wrapper
-                    >
-                        <h2>Sign up</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.</p>
-                        <CButton
-                                color="primary"
-                                class="active mt-3"
-                                @click="goRegister()"
-                        >
-                            Register Now!
-                        </CButton>
                     </CCard>
                 </CCardGroup>
             </CCol>
@@ -71,8 +63,8 @@
         name: 'Login',
         data() {
             return {
-                email: '',
-                password: '',
+                email: 'admin@admin.com',
+                password: 'password',
                 showMessage: false,
                 message: '',
             }
@@ -90,7 +82,7 @@
                     self.email = '';
                     self.password = '';
                     localStorage.setItem("api_token", response.data.access_token);
-                    self.$router.push({path: 'notes'});
+                    self.$router.push({path: '/crm/clients'});
                 })
                     .catch(function (error) {
                         self.message = 'Incorrect E-mail or password';
